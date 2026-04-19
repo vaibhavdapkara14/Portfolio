@@ -12,7 +12,8 @@ export default function Contact() {
     setSubmitStatus("idle");
 
     const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "13d3a38d-3ffe-4cd2-bd01-6474faad2d6d");
+    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "13d3a38d-3ffe-4cd2-bd01-6474faad2d6d";
+    formData.append("access_key", accessKey);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
