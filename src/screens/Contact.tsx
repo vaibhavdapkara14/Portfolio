@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Linkedin, Github, CheckCircle2, AlertCircle } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -12,7 +12,7 @@ export default function Contact() {
     setSubmitStatus("idle");
 
     const formData = new FormData(event.currentTarget);
-    const accessKey = import.meta.env.VITE_WEB3FORMS_KEY || "13d3a38d-3ffe-4cd2-bd01-6474faad2d6d";
+    const accessKey = (import.meta as any).env.VITE_WEB3FORMS_KEY || "13d3a38d-3ffe-4cd2-bd01-6474faad2d6d";
     formData.append("access_key", accessKey);
 
     try {
