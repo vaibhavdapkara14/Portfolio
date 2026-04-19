@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, Code2, Database, LayoutPanelLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import profilePic from "../assets/p.jpeg";
+import { profileBase64 } from "../assets/profileData";
 
 export default function Home() {
   return (
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="aspect-[4/5] bg-surface-low rounded-[2rem] overflow-hidden hover:scale-[1.02] transition-all duration-1000 group shadow-2xl shadow-navy/20">
             <img 
               referrerPolicy="no-referrer"
-              src={profilePic} 
+              src={profileBase64} 
               alt="Vaibhav Dapkara" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               onError={(e) => {
