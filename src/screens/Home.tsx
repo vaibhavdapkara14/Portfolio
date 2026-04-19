@@ -52,13 +52,9 @@ export default function Home() {
           <div className="aspect-[4/5] bg-surface-low rounded-[2rem] overflow-hidden hover:scale-[1.02] transition-all duration-1000 group shadow-2xl shadow-navy/20">
             <img 
               referrerPolicy="no-referrer"
-              src={profilePic} 
+              src={profilePic || "/p.jpeg"} 
               alt="Vaibhav Dapkara" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000";
-              }}
             />
             <div className="absolute inset-0 bg-navy/5 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
           </div>
