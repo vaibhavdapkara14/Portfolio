@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Code2, Database, LayoutPanelLeft } from "lucide-react";
+import { ArrowRight, Code2, Database, LayoutPanelLeft, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import { profileBase64 } from "../assets/profileData";
 
@@ -21,8 +21,8 @@ export default function Home() {
           </h1>
           <p className="text-lg text-navy/60 leading-relaxed max-w-xl mb-12">
             Hi, I'm <span className="text-navy font-bold">Vaibhav Dapkara</span>. 
-            I build scalable web applications using Java, Spring Boot, and modern web technologies. 
-            Passionate about backend performance, clean UI, and real-world problem solving.
+            I build scalable web applications using Java, Spring Boot, Node.js, Express.js, and modern web technologies. 
+            Passionate about backend performance, clean UI, and database systems.
           </p>
           
           <div className="flex flex-wrap gap-6">
@@ -39,6 +39,15 @@ export default function Home() {
             >
               Contact Me
             </Link>
+            <a 
+              href="https://portfolio-murex-ten-56.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-5 rounded-sm font-bold uppercase tracking-[0.15em] text-[0.8rem] text-gold border border-gold/20 bg-gold/5 hover:bg-gold hover:text-navy transition-all duration-300 flex items-center gap-2"
+            >
+              <Globe className="w-4 h-4" />
+              Vercel Version
+            </a>
           </div>
         </motion.div>
 
@@ -85,60 +94,60 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
-
-      {/* Featured Specializations */}
-      <section className="bg-surface-low py-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div className="max-w-2xl">
-              <span className="gold-signal mb-4 block">The Toolkit</span>
-              <h2 className="text-4xl md:text-5xl font-black text-navy tracking-tight leading-none">
-                Technical Specializations
-              </h2>
-            </div>
-            <p className="text-navy/40 italic text-lg max-w-xs text-right">
-              "Precision in code, elegance in execution."
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { 
-                icon: <Code2 className="w-6 h-6" />, 
-                title: "Backend Mastery", 
-                desc: "Java, Spring Boot, Hibernate, and RESTful API design.",
-                color: "bg-navy"
-              },
-              { 
-                icon: <Database className="w-6 h-6" />, 
-                title: "Data Architecture", 
-                desc: "MySQL and complex relational schema design.",
-                color: "bg-gold"
-              },
-              { 
-                icon: <LayoutPanelLeft className="w-6 h-6" />, 
-                title: "UI Engineering", 
-                desc: "Modern React interfaces with accessible, editorial design.",
-                color: "bg-navy"
-              }
-            ].map((skill, i) => (
-              <motion.div 
-                key={i}
-                whileHover={{ y: -10 }}
-                className="bg-white p-10 rounded-[2rem] border border-surface-highest/10 hover:shadow-2xl transition-all duration-300"
-              >
-                <div className={`w-12 h-12 ${skill.color} text-white rounded-xl flex items-center justify-center mb-8`}>
-                  {skill.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-navy mb-4">{skill.title}</h3>
-                <p className="text-navy/60 leading-relaxed">
-                  {skill.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+ 
+       {/* Featured Specializations */}
+       <section className="bg-surface-low py-32">
+         <div className="max-w-7xl mx-auto px-8">
+           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+             <div className="max-w-2xl">
+               <span className="gold-signal mb-4 block">The Toolkit</span>
+               <h2 className="text-4xl md:text-5xl font-black text-navy tracking-tight leading-none">
+                 Technical Specializations
+               </h2>
+             </div>
+             <p className="text-navy/40 italic text-lg max-w-xs text-right">
+               "Precision in code, elegance in execution."
+             </p>
+           </div>
+ 
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             {[
+               { 
+                 icon: <Code2 className="w-6 h-6" />, 
+                 title: "Backend Mastery", 
+                 desc: "Java, Spring Boot, Node.js, Express.js, and RESTful API architecture.",
+                 color: "bg-navy"
+               },
+               { 
+                 icon: <Database className="w-6 h-6" />, 
+                 title: "Data Architecture", 
+                 desc: "MySQL and MongoDB NoSQL schema design.",
+                 color: "bg-gold"
+               },
+               { 
+                 icon: <LayoutPanelLeft className="w-6 h-6" />, 
+                 title: "UI Engineering", 
+                 desc: "Modern React interfaces with accessible, editorial design.",
+                 color: "bg-navy"
+               }
+             ].map((skill, i) => (
+               <motion.div 
+                 key={i}
+                 whileHover={{ y: -10 }}
+                 className="bg-white p-10 rounded-[2rem] border border-surface-highest/10 hover:shadow-2xl transition-all duration-300"
+               >
+                 <div className={`w-12 h-12 ${skill.color} text-white rounded-xl flex items-center justify-center mb-8`}>
+                   {skill.icon}
+                 </div>
+                 <h3 className="text-2xl font-bold text-navy mb-4">{skill.title}</h3>
+                 <p className="text-navy/60 leading-relaxed">
+                   {skill.desc}
+                 </p>
+               </motion.div>
+             ))}
+           </div>
+         </div>
+       </section>
+     </div>
+   );
+ }

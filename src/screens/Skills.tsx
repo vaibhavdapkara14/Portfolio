@@ -10,6 +10,7 @@ const skillClusters = [
     skills: [
       { name: "Java Architecture", level: 95, detail: "Expert in JVM internals and multi-threading." },
       { name: "Spring Ecosystem", level: 90, detail: "Spring Boot, Security, and Microservices." },
+      { name: "Node.js & Express.js", level: 88, detail: "Scalable asynchronous backends and server-side runtimes." },
       { name: "RESTful API Design", level: 92, detail: "Optimized endpoint structures and documentation." },
       { name: "Hibernate / JPA", level: 85, detail: "Complex data mapping and performance tuning." }
     ]
@@ -27,12 +28,13 @@ const skillClusters = [
     ]
   },
   {
-    title: "Methods & Tools",
+    title: "Methods & Databases",
     id: "03",
     icon: <Database className="w-5 h-5" />,
-    description: "Reliable workflows and environments for consistent delivery.",
+    description: "Reliable databases and workflows for consistent deployment.",
     skills: [
-      { name: "MySQL / Relational", level: 90, detail: "Schema design and advanced query optimization." },
+      { name: "MySQL / Relational", level: 90, detail: "Schema design and advanced SQL query optimization." },
+      { name: "MongoDB / NoSQL", level: 88, detail: "Flexible schema and efficient aggregation pipelines." },
       { name: "Git / Versioning", level: 92, detail: "Trunk-based development and secure branching." },
       { name: "Agile / Scrum", level: 85, detail: "Iterative development and rapid prototyping." },
       { name: "Workflow Automation", level: 80, detail: "Make.com and custom pipeline scripting." }

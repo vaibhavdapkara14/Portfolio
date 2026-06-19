@@ -34,6 +34,14 @@ export function Footer() {
           >
             GitHub
           </a>
+          <a
+            href="https://portfolio-murex-ten-56.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-navy/40 hover:text-gold transition-colors text-sm font-bold uppercase tracking-widest underline underline-offset-4"
+          >
+            Vercel Link
+          </a>
         </div>
       </div>
     </footer>
