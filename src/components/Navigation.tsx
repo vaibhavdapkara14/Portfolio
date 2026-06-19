@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { Layout } from "lucide-react";
+import { Layout, Download } from "lucide-react";
 import { motion } from "motion/react";
+import { generateAndDownloadCV } from "../utils/cvGenerator";
 
 const links = [
   { name: "About", path: "/about" },
@@ -36,6 +37,13 @@ export function Navigation() {
               {link.name}
             </Link>
           ))}
+          <button
+            onClick={generateAndDownloadCV}
+            className="text-[0.75rem] text-gold font-bold uppercase tracking-[0.15em] hover:text-navy transition-colors duration-300 flex items-center gap-1.5"
+          >
+            <Download className="w-3.5 h-3.5" />
+            Download CV
+          </button>
           <Link
             to="/contact"
             className="bg-navy text-white px-6 py-2.5 rounded-sm font-bold uppercase tracking-[0.1em] text-[0.7rem] hover:bg-gold transition-colors duration-300"

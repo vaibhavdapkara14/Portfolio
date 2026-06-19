@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { Download } from "lucide-react";
+import { generateAndDownloadCV } from "../utils/cvGenerator";
 
 export default function About() {
   return (
@@ -11,14 +13,21 @@ export default function About() {
       </div>
 
       {/* Narrative Intro */}
-      <div className="lg:col-span-5 sticky top-32 h-fit">
-        <p className="text-xl text-navy/60 leading-relaxed mb-8">
+      <div className="lg:col-span-5 sticky top-32 h-fit space-y-8">
+        <p className="text-xl text-navy/60 leading-relaxed">
           I am a passionate Java Full Stack Developer with a strong foundation in backend development and modern web technologies. I enjoy building scalable, efficient, and user-friendly applications.
         </p>
-        <p className="text-lg text-navy/40 leading-relaxed mb-12">
+        <p className="text-lg text-navy/40 leading-relaxed">
           Currently, I am working as a Java Full Stack Trainee where I develop REST APIs, handle database operations, and build responsive user interfaces.
         </p>
-        <div className="h-px w-20 bg-gold"></div>
+        <button
+          onClick={generateAndDownloadCV}
+          className="bg-navy text-white px-8 py-4 rounded-sm font-bold uppercase tracking-[0.15em] text-[0.75rem] hover:bg-gold transition-all duration-300 deep-shadow flex items-center gap-2.5 group w-fit cursor-pointer"
+        >
+          <Download className="w-4 h-4 group-hover:-translate-y-0.5 transition-all duration-300" />
+          Download Resume (PDF)
+        </button>
+        <div className="h-px w-20 bg-gold pt-2"></div>
       </div>
 
       {/* Timeline */}
